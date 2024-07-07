@@ -2,7 +2,7 @@
 set -e
 
 # Repositorio publico de GitHub
-GIT_REPO_URL="https://github.com/devflores-ka/django.git"
+GIT_REPO_URL="https://github.com/devflores-ka/djproject"
 
 # Nombre del directorio de la aplicacion
 PROJECT_MAIN_DIR_NAME="djproject"
