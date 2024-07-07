@@ -1,5 +1,5 @@
 """
-URL configuration for django_app project.
+URL configuration for core project.
 
 The `urlpatterns` list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/5.0/topics/http/urls/
@@ -23,6 +23,7 @@ from . import views
 
 urlpatterns = [
     path("admin/", admin.site.urls),
+    path('', views.HomePageView.as_view(), name='home'),
 ]
 
 if settings.DEBUG:
