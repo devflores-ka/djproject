@@ -12,6 +12,9 @@ fi
 # Change ownership to ubuntu user
 sudo chown -R ubuntu:ubuntu "/home/ubuntu/$PROJECT_MAIN_DIR_NAME"
 
+# Necesario para instalar mysqlclient
+sudo apt-get install pkg-config -y
+
 # Create virtual environment
 echo "Creating virtual environment..."
 virtualenv "/home/ubuntu/$PROJECT_MAIN_DIR_NAME/venv"
