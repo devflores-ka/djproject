@@ -21,4 +21,5 @@ chmod +x scripts/*.sh
 ./scripts/python_dependencies.sh
 ./scripts/gunicorn.sh
 ./scripts/nginx.sh
+./scripts/after_install.sh
 ./scripts/start_app.sh
