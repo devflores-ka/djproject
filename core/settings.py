@@ -81,11 +81,11 @@ WSGI_APPLICATION = "core.wsgi.application"
 DATABASES = {
     "default": {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'django',
-        'USER': 'admin',
-        'PASSWORD': 'INACAP24',
-        'HOST': 'django.cvmii24eu7x1.us-east-1.rds.amazonaws.com', # VERIFICA EL ENDPOINT
-        'PORT': '3306',
+        'NAME': 'django', #NOMBRE DE TU BASE DE DATOS MYSQL (NO RDS)
+        'USER': 'admin', #TU USUARIO CREADO EN RDS
+        'PASSWORD': 'password', #AÑADE TU CONTRASEÑA
+        'HOST': 'endpoint', # VERIFICA EL ENDPOINT
+        'PORT': '3306', #PUERTO ELEJIDO AL CREAR SERVICIO RDS
     }
 }
 
