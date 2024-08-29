@@ -78,14 +78,23 @@ WSGI_APPLICATION = "core.wsgi.application"
 # Database
 # https://docs.djangoproject.com/en/5.0/ref/settings/#databases
 
+# Definir las variables fuera del diccionario DATABASES
+DATABASE_ENGINE = 'django.db.backends.mysql'
+DATABASE_NAME = 'django'  # NOMBRE DE TU BASE DE DATOS MYSQL (NO RDS)
+DATABASE_USER = 'admin'  # TU USUARIO CREADO EN RDS
+DATABASE_PASSWORD = 'password'  # AÑADE TU CONTRASEÑA
+DATABASE_HOST = 'endpoint'  # VERIFICA EL ENDPOINT
+DATABASE_PORT = '3306'  # PUERTO ELEGIDO AL CREAR SERVICIO RDS
+
+# Usar las variables dentro del diccionario DATABASES
 DATABASES = {
     "default": {
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'django', #NOMBRE DE TU BASE DE DATOS MYSQL (NO RDS)
-        'USER': 'admin', #TU USUARIO CREADO EN RDS
-        'PASSWORD': 'password', #AÑADE TU CONTRASEÑA
-        'HOST': 'endpoint', # VERIFICA EL ENDPOINT
-        'PORT': '3306', #PUERTO ELEJIDO AL CREAR SERVICIO RDS
+        'ENGINE': DATABASE_ENGINE,
+        'NAME': DATABASE_NAME,
+        'USER': DATABASE_USER,
+        'PASSWORD': DATABASE_PASSWORD,
+        'HOST': DATABASE_HOST,
+        'PORT': DATABASE_PORT,
     }
 }
 
